@@ -1,0 +1,426 @@
+* , body , html{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color:white;
+
+}
+
+/*....................üst menüler....................................*/
+.menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: -1px 5px 1px rgb(41, 40, 40);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    width: 100%;
+    
+    color: yellowgreen;
+    height: 60px;
+}
+.menu #logo {
+    float: left;
+    height: 30px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    line-height: 30px;
+}
+/*............................................................................................*/
+.menu > ul{
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style-type: none;
+}
+.menu >ul >li{
+    float: left;
+}
+.menu-item{
+    display: inline-block;
+    padding: 15px 20px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-decoration: none;
+}
+.menu-item:hover{
+    background-color: yellowgreen;
+    color: black;
+}
+
+.sub-contect{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+    position: absolute;
+    top: 60px;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    max-height: 0%;
+}
+.sub-contect a{
+    color: white;
+    text-decoration: none;
+    
+}
+.sub-drop{
+    padding: 0;
+}
+.sub-drop ul{
+    width: 100%;
+    padding: 0%;
+    margin: 0;
+    list-style-type: none;
+}
+.sub-drop > ul{
+    visibility: hidden;
+    opacity: 0;
+}
+.menu ul li:hover .sub-drop > ul{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s , opacity 0.3s ease-in;
+}
+.sub-drop ul li a{
+    display: inline-block;
+    padding: 5px 15px;
+
+}
+.sub-drop ul li:hover{
+    
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
+background: rgb(191,210,85); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(191,210,85,1) 0%, rgba(142,185,42,1) 50%, rgba(114,170,0,1) 51%, rgba(158,203,45,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+/*................................merkez.................................*/
+ul#subm-menu{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+position: absolute;
+top: 0px;
+right: 82px;
+overflow: hidden;
+max-width: 0;
+
+}
+.sub-drop ul li:hover > ul#subm-menu{
+max-width: 150px;
+transition: max-width 0.3s ease-in;
+}
+/*....................................sirket............................*/
+ul#subs-menu{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+position: absolute;
+top: 29.5px;
+right: 82px;
+overflow: hidden;
+max-width: 0;
+
+}
+.sub-drop ul li:hover > ul#subs-menu{
+max-width: 150px;
+transition: max-width 0.3s ease-in;
+}
+/*.........................kana...........................*/
+ul#subk-menu{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+position: absolute;
+top: 58px;
+right: 82px;
+overflow: hidden;
+max-width: 0;
+
+}
+.sub-drop ul li:hover > ul#subk-menu{
+max-width: 150px;
+transition: max-width 0.3s ease-in;
+}
+/*..............................web tasarim ......................*/
+
+ul#subwe-menu{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+position: absolute;
+top: 0px;
+right: 126px;
+overflow: hidden;
+max-width: 0;
+
+}
+.sub-drop ul li:hover > ul#subwe-menu{
+max-width: 150px;
+transition: max-width 0.3s ease-in;
+}
+/*...............................web siteleri..........................*/
+ul#subw-menu{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+position: absolute;
+top: 29.5px;
+right: 126px;
+overflow: hidden;
+max-width: 0;
+
+}
+.sub-drop ul li:hover > ul#subw-menu{
+max-width: 150px;
+transition: max-width 0.3s ease-in;
+}
+/*............................yonetim.................................*/
+ul#suby-menu{
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    position: absolute;
+    top: 0px;
+    right: 88px;
+    overflow: hidden;
+    max-width: 0;
+
+}
+.sub-drop ul li:hover > ul#suby-menu{
+    max-width: 90px;
+    transition: max-width 0.3s ease-in;
+}
+/*.......................................calisma takimi...........................*/
+ul#subc-menu{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+position: absolute;
+top: 40px;
+right: 88px;
+overflow: hidden;
+max-width: 0;
+}
+
+.sub-drop ul li:hover > ul#subc-menu{
+    
+max-width: 200px;
+transition: max-width 0.3s ease-in;
+}
+/*..............................telefon munarasi........................................*/
+
+ul#subn-menu{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,353535+19,000000+19,353535+36,262626+36,000000+45,353535+67,212121+67,000000+79&1+0,0.9+100 */
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 19%, rgba(38,38,38,0.96) 36%, rgba(0,0,0,0.95) 45%, rgba(33,33,33,0.93) 67%, rgba(0,0,0,0.92) 79%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.98) 19%,rgba(38,38,38,0.96) 36%,rgba(0,0,0,0.95) 45%,rgba(33,33,33,0.93) 67%,rgba(0,0,0,0.92) 79%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+position: absolute;
+top: 88px;
+right: 100.5px;
+overflow: hidden;
+max-width: 0;
+
+}
+.sub-drop ul li:hover > ul#subn-menu{
+max-width: 200px;
+transition: max-width 0.3s ease-in;
+}
+/*..................................................................................*/
+.menu-item:focus{
+    
+    background-color: yellowgreen;
+}
+.menu ul li:hover .sub-contect{
+    max-height: 400px;
+    overflow: visible;
+   transition: max-height 0.3s ease-in;
+}
+#rmenu{
+    float: right;
+}
+#img{
+    background:#333 url('https://images.pexels.com/photos/4134791/pexels-photo-4134791.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+    no-repeat center center / cover ;
+
+    height: 100vh;
+    color: white;
+    
+}
+/*            Buraya kadar üst menüler bitiyor                        */
+
+/*......................ilk gösterim............................*/
+.sometext{
+    padding-top: 260px;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+.sometext span{
+    padding-top: 30px;
+    font-size: 3em;
+    text-align: center;
+    font-weight: bolder;
+}
+.sometext > a{
+    text-decoration: none;
+    color: rgb(114, 110, 110);
+
+}
+
+/*...........Web sitesi tasarımının en önemli özellikleri !!..........*/
+
+.text-primary{
+    color:yellowgreen;
+}
+#what{
+    background-color: white;
+    color: black;
+    padding: 1.5rem;
+}
+.text-center{
+    text-align: center;
+    font-size: 2rem;
+}
+.container{ 
+    display: flex;
+    padding-top: 1rem;
+}
+.article{
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    margin-left: 4rem;
+
+}
+.article:hover{
+           color: yellowgreen;
+}
+/*..................Biz Kimiz......................*/
+
+#who{
+    display: flex;
+    padding: 20px;
+}
+
+.who-img{
+    flex: 1;
+    background: #333 url('https://images.pexels.com/photos/5646012/pexels-photo-5646012.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+    no-repeat center center / cover ;
+
+}
+.who-text{
+    flex: 1;
+    color: black;
+    padding: 2rem;
+    line-height: 1.7rem;
+}
+.who-text ul{
+    list-style: none;
+}
+who-text p{
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+.who-text h3{
+    padding-bottom: 1.5rem;
+}
+.who-text li{
+    
+    padding: 0.5rem 0rem;
+    border-bottom: 1px dotted #444;
+}
+#who li:hover{
+    background-color: yellowgreen;
+    transition-duration: 0.2s;
+}
+/*............Müşterimiz olmak ister misiniz ?!..................*/
+
+#cont{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+#txt{
+    font-size: 28px;
+}
+#zar{
+    display: inline-block;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px #999;
+    transition-duration: 0.1s;
+}
+#zar:hover{
+    background-color: red;
+    color: white;
+}
+#zar:active{
+    background-color: yellowgreen;
+    box-shadow: 0 0px #666;
+    transform: translateY(4px);
+}
+#cont li{
+    list-style-type: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid #9f9f9f;
+}
+#cont li:hover{
+    background-color: yellowgreen;
+    transition-duration: 0.2s;
+}
+.selected{
+    background-color: #99ffaa;
+}
+.item-tr{
+    padding-bottom: 1rem;
+}
